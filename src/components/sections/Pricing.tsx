@@ -18,7 +18,7 @@ const tiers: PricingTier[] = [
   {
     name: 'Short Clip',
     duration: '30 秒內',
-    price: 'NT$500',
+    price: 'NT$600',
     unit: '/ 支',
     suitable: '適合 Reels、TikTok 快節奏內容',
     features: [
@@ -29,7 +29,7 @@ const tiers: PricingTier[] = [
   {
     name: 'Standard Clip',
     duration: '30–60 秒',
-    price: 'NT$900',
+    price: 'NT$1,000',
     unit: '/ 支',
     suitable: '適合完整敘事型短影音',
     features: [
@@ -43,7 +43,7 @@ const tiers: PricingTier[] = [
   {
     name: 'Premium Clip',
     duration: '60–90 秒',
-    price: 'NT$1,300',
+    price: 'NT$1,500',
     unit: '/ 支',
     suitable: '適合品牌內容、知識型或故事型影片',
     features: [
