@@ -215,23 +215,23 @@ export default function Pricing() {
             </div>
           </ScrollReveal>
 
-          {/* Block 2 — Subscription / bulk (accent-orange CTA style) */}
+          {/* Block 2 — Subscription / bulk (cyan + violet CTA style) */}
           <ScrollReveal delay={0.2}>
             <div
               className="relative rounded-[var(--card-border-radius)] p-8 h-full overflow-hidden transition-all duration-[400ms] ease-[var(--ease-out-expo)] hover:-translate-y-1"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(255, 107, 44, 0.12) 0%, rgba(20, 20, 20, 0.4) 70%)',
-                border: '1px solid rgba(255, 107, 44, 0.30)',
+                  'linear-gradient(135deg, rgba(0, 229, 208, 0.10) 0%, rgba(120, 80, 255, 0.06) 50%, rgba(20, 20, 20, 0.4) 85%)',
+                border: '1px solid rgba(0, 229, 208, 0.30)',
                 backdropFilter: 'blur(20px)',
                 WebkitBackdropFilter: 'blur(20px)',
               }}
             >
               {/* Top accent line */}
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-accent-orange)] via-[var(--color-accent)] to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-accent)] via-[#7B61FF] to-transparent" />
 
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-[11px] tracking-[0.2em] uppercase text-[var(--color-accent-orange)] font-[var(--font-mono)] font-bold">
+                <span className="text-[11px] tracking-[0.2em] uppercase text-accent font-[var(--font-mono)] font-bold">
                   Long-term partnership
                 </span>
               </div>
@@ -248,30 +248,33 @@ export default function Pricing() {
                 data-cursor-hover
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5"
                 style={{
-                  background: 'rgba(255, 107, 44, 0.15)',
-                  border: '1px solid rgba(255, 107, 44, 0.35)',
+                  background: 'rgba(0, 229, 208, 0.10)',
+                  border: '1px solid rgba(0, 229, 208, 0.30)',
                 }}
               >
-                <span className="text-[13px] font-semibold text-[var(--color-accent-orange)]">
+                <span className="text-[13px] font-semibold text-accent">
                   優惠價格另議
                 </span>
-                <ArrowRight className="w-3.5 h-3.5 text-[var(--color-accent-orange)]" />
+                <ArrowRight className="w-3.5 h-3.5 text-accent" />
               </a>
             </div>
           </ScrollReveal>
         </div>
 
-        {/* ─── Upgrade Services｜進階服務 ─────────────────────────────── */}
+        {/* ─── Upgrade Services｜進階服務 (orange theme) ──────────────── */}
         <ScrollReveal delay={0.3}>
           <div
-            className="mt-6 relative rounded-[var(--card-border-radius)] p-8 md:p-10 overflow-hidden glass-medium transition-all duration-[400ms] ease-[var(--ease-out-expo)] hover:-translate-y-1"
+            className="mt-6 relative rounded-[var(--card-border-radius)] p-8 md:p-10 overflow-hidden transition-all duration-[400ms] ease-[var(--ease-out-expo)] hover:-translate-y-1"
             style={{
-              backgroundImage:
-                'linear-gradient(135deg, rgba(0, 229, 208, 0.06) 0%, rgba(120, 80, 255, 0.04) 50%, rgba(0, 0, 0, 0) 80%)',
+              background:
+                'linear-gradient(135deg, rgba(255, 107, 44, 0.12) 0%, rgba(20, 20, 20, 0.4) 70%)',
+              border: '1px solid rgba(255, 107, 44, 0.30)',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
             }}
           >
             {/* Top accent line */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-accent)] via-[#7B61FF] to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-accent-orange)] via-[var(--color-accent)] to-transparent" />
 
             {/* Soft radial glow top-right */}
             <div
@@ -279,7 +282,7 @@ export default function Pricing() {
               className="absolute -top-20 -right-20 w-[320px] h-[320px] pointer-events-none"
               style={{
                 background:
-                  'radial-gradient(circle, rgba(0, 229, 208, 0.10) 0%, transparent 60%)',
+                  'radial-gradient(circle, rgba(255, 107, 44, 0.12) 0%, transparent 60%)',
                 filter: 'blur(20px)',
               }}
             />
@@ -287,8 +290,8 @@ export default function Pricing() {
             <div className="relative">
               {/* Eyebrow tag */}
               <div className="flex items-center gap-2 mb-3">
-                <Rocket className="w-3.5 h-3.5 text-accent" />
-                <span className="text-[11px] tracking-[0.2em] uppercase text-accent font-[var(--font-mono)] font-bold">
+                <Rocket className="w-3.5 h-3.5 text-[var(--color-accent-orange)]" />
+                <span className="text-[11px] tracking-[0.2em] uppercase text-[var(--color-accent-orange)] font-[var(--font-mono)] font-bold">
                   Upgrade Services
                 </span>
               </div>
@@ -301,9 +304,9 @@ export default function Pricing() {
               {/* Pitch paragraph */}
               <p className="text-[14px] md:text-[15px] text-text-secondary leading-[1.85] mb-8">
                 我同時提供品牌 / 公司 / 個人形象網站的規劃與設計，將短影音視為
-                <span className="text-accent font-medium">「引流入口」</span>，
+                <span className="text-[var(--color-accent-orange)] font-medium">「引流入口」</span>，
                 並透過品牌形象網站的建置，打造具有
-                <span className="text-accent font-medium">長尾效應的轉換載體</span>。
+                <span className="text-[var(--color-accent-orange)] font-medium">長尾效應的轉換載體</span>。
               </p>
 
               {/* Funnel viz + Bullet checklist (side-by-side on md+) */}
@@ -328,11 +331,11 @@ export default function Pricing() {
                           <div
                             className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center"
                             style={{
-                              background: 'rgba(0, 229, 208, 0.08)',
-                              border: '1px solid rgba(0, 229, 208, 0.20)',
+                              background: 'rgba(255, 107, 44, 0.10)',
+                              border: '1px solid rgba(255, 107, 44, 0.25)',
                             }}
                           >
-                            <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                            <Icon className="w-5 h-5 md:w-6 md:h-6 text-[var(--color-accent-orange)]" />
                           </div>
                           <div className="text-center">
                             <div className="text-[13px] text-text-primary font-medium leading-tight">
@@ -364,9 +367,9 @@ export default function Pricing() {
                       >
                         <span
                           className="mt-1 shrink-0 w-4 h-4 rounded-full flex items-center justify-center"
-                          style={{ background: 'rgba(0, 229, 208, 0.15)' }}
+                          style={{ background: 'rgba(255, 107, 44, 0.18)' }}
                         >
-                          <Check className="w-2.5 h-2.5 text-accent" strokeWidth={3} />
+                          <Check className="w-2.5 h-2.5 text-[var(--color-accent-orange)]" strokeWidth={3} />
                         </span>
                         <span>{item}</span>
                       </li>
@@ -379,12 +382,12 @@ export default function Pricing() {
               <div
                 className="flex items-start gap-2.5 px-4 py-3 rounded-xl"
                 style={{
-                  background: 'rgba(0, 229, 208, 0.06)',
-                  border: '1px solid rgba(0, 229, 208, 0.18)',
+                  background: 'rgba(255, 107, 44, 0.08)',
+                  border: '1px solid rgba(255, 107, 44, 0.22)',
                 }}
               >
-                <Sparkles className="w-4 h-4 shrink-0 mt-[2px] text-accent" />
-                <span className="text-[13px] text-accent leading-[1.65] font-medium">
+                <Sparkles className="w-4 h-4 shrink-0 mt-[2px] text-[var(--color-accent-orange)]" />
+                <span className="text-[13px] text-[var(--color-accent-orange)] leading-[1.65] font-medium">
                   可單獨委託網站設計，或與剪輯服務整合規劃
                 </span>
               </div>
