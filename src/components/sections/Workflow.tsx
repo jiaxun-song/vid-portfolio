@@ -124,24 +124,17 @@ export default function Workflow() {
           ))}
         </div>
 
-        {/* Notes block — same orange-accent style as Pricing's 加值服務 block */}
+        {/* Notes block — quiet glass tone, low-visual-weight */}
         <ScrollReveal delay={0.4}>
           <div
-            className="relative rounded-[var(--card-border-radius)] p-8 overflow-hidden transition-all duration-[400ms] ease-[var(--ease-out-expo)] hover:-translate-y-1"
-            style={{
-              background:
-                'linear-gradient(135deg, rgba(255, 107, 44, 0.12) 0%, rgba(20, 20, 20, 0.4) 70%)',
-              border: '1px solid rgba(255, 107, 44, 0.30)',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)',
-            }}
+            className="relative rounded-[var(--card-border-radius)] p-8 overflow-hidden transition-all duration-[400ms] ease-[var(--ease-out-expo)] hover:-translate-y-1 glass-medium"
           >
-            {/* Top accent line */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-accent-orange)] via-[var(--color-accent)] to-transparent" />
+            {/* Top accent line — subtle cyan */}
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-accent)] via-[rgba(0,229,208,0.3)] to-transparent opacity-70" />
 
             <div className="flex items-center gap-2 mb-3">
-              <Info className="w-3.5 h-3.5 text-[var(--color-accent-orange)]" />
-              <span className="text-[11px] tracking-[0.2em] uppercase text-[var(--color-accent-orange)] font-[var(--font-mono)] font-bold">
+              <Info className="w-3.5 h-3.5 text-accent" />
+              <span className="text-[11px] tracking-[0.2em] uppercase text-accent font-[var(--font-mono)] font-bold">
                 Notes
               </span>
             </div>
@@ -161,7 +154,7 @@ export default function Workflow() {
                       width: 6,
                       height: 6,
                       borderRadius: 999,
-                      background: 'var(--color-accent-orange)',
+                      background: 'var(--color-accent)',
                     }}
                     aria-hidden
                   />
