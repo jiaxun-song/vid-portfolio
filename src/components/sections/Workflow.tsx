@@ -1,6 +1,6 @@
 'use client';
 
-import { Info } from 'lucide-react';
+import { Info, Sparkles } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 interface Step {
@@ -114,7 +114,7 @@ export default function Workflow() {
                     border: '1px solid rgba(0, 229, 208, 0.18)',
                   }}
                 >
-                  <span className="text-base shrink-0 mt-[1px] select-none" aria-hidden>👉</span>
+                  <Sparkles className="w-4 h-4 shrink-0 mt-[2px] text-accent" />
                   <span className="text-[13px] text-accent leading-[1.65] font-medium">
                     {step.highlight}
                   </span>
