@@ -165,8 +165,21 @@ export function parseVideoUrl(url: string): ParsedVideo | null {
   }
 }
 
-export function getYouTubeThumbnail(videoId: string): string {
-  return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+export function getYouTubeThumbnail(
+  videoId: string,
+  orientation?: VideoOrientation,
+): string {
+  // For vertical Shorts, oar2.jpg is the true 1080x1920 vertical thumbnail
+  // (no letterboxed cropping). Otherwise use 1280x720 high-res.
+  if (orientation === 'vertical') {
+    return `https://i.ytimg.com/vi/${videoId}/oar2.jpg`;
+  }
+  return `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+}
+
+// Fallback thumbnail when the high-res / vertical version is unavailable (404).
+export function getYouTubeThumbnailFallback(videoId: string): string {
+  return `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 }
 
 export function getVideoEmbedUrl(video: Video, autoplay = false): string {
@@ -187,6 +200,8 @@ export function getVideoThumbnail(video: Video): string {
   if (video.image) return video.image;
   if (!video.url) return '';
   const parsed = parseVideoUrl(video.url);
-  if (parsed?.provider === 'youtube') return getYouTubeThumbnail(parsed.videoId);
+  if (parsed?.provider === 'youtube') {
+    return getYouTubeThumbnail(parsed.videoId, video.orientation);
+  }
   return '';
 }

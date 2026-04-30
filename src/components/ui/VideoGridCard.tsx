@@ -8,6 +8,7 @@ import {
   type Video,
   getVideoEmbedUrl,
   getVideoThumbnail,
+  getYouTubeThumbnailFallback,
   parseVideoUrl,
 } from '@/data/videos';
 
@@ -32,10 +33,16 @@ const colSpanClass: Record<Video['orientation'], string> = {
 
 export default function VideoGridCard({ video, index }: VideoGridCardProps) {
   const [playing, setPlaying] = useState(false);
+  const [thumbError, setThumbError] = useState(false);
 
-  const thumbnail = getVideoThumbnail(video);
-  const embedUrl = getVideoEmbedUrl(video, true);
   const provider = video.url ? parseVideoUrl(video.url)?.provider : undefined;
+  const parsedId = video.url ? parseVideoUrl(video.url)?.videoId : undefined;
+  // If the high-res / vertical thumbnail 404s, swap to the always-available hqdefault.
+  const thumbnail =
+    thumbError && provider === 'youtube' && parsedId
+      ? getYouTubeThumbnailFallback(parsedId)
+      : getVideoThumbnail(video);
+  const embedUrl = getVideoEmbedUrl(video, true);
   const hasVideo = !!video.url;
   const isCover = video.category === 'cover';
 
@@ -86,6 +93,7 @@ export default function VideoGridCard({ video, index }: VideoGridCardProps) {
                   className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   unoptimized={provider === 'youtube'}
+                  onError={() => setThumbError(true)}
                 />
               )}
               {/* Play overlay */}
@@ -104,6 +112,7 @@ export default function VideoGridCard({ video, index }: VideoGridCardProps) {
                 fill
                 className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
                 sizes="(max-width: 768px) 100vw, 33vw"
+                onError={() => setThumbError(true)}
               />
             )
           )}
