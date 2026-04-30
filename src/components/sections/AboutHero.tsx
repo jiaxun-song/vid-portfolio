@@ -54,7 +54,7 @@ export default function AboutHero() {
               className="text-[var(--color-text-secondary)] text-base leading-[1.85] font-light space-y-[18px]"
             >
               <p>
-                我是一位擁有 <span className="text-[var(--color-accent)] font-normal">7 年設計背景的創作者，近年專注於短影音剪輯與內容呈現，擅長從「品牌視角」出發，打造有節奏、有記憶點的影像作品。</span>
+                我是一位擁有 <span className="text-[var(--color-accent)] font-normal">7 年設計背景的創作者，近年樂衷於短影音剪輯與內容呈現，擅長從「品牌視角」出發，打造有節奏、有記憶點的影像作品。</span>
               </p>
               <p>
                 過去曾參與 Web3、Fintech、電商、交友產品網頁＆App 開發設計專案，這些經驗讓我在剪輯時不只關注畫面本身，而是更重視
