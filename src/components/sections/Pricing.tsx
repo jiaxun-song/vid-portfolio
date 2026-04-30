@@ -377,7 +377,7 @@ export default function Pricing() {
 
               {/* CTA highlight */}
               <div
-                className="inline-flex items-start gap-2.5 px-4 py-3 rounded-xl"
+                className="flex items-start gap-2.5 px-4 py-3 rounded-xl"
                 style={{
                   background: 'rgba(0, 229, 208, 0.06)',
                   border: '1px solid rgba(0, 229, 208, 0.18)',
