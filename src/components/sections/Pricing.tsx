@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, Sparkles, ArrowRight, Camera, Mic, FileText, Film, Globe, TrendingUp, Magnet, ShieldCheck } from 'lucide-react';
+import { Check, Sparkles, ArrowRight, Camera, Mic, FileText, Magnet, ShieldCheck } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 interface PricingTier {
@@ -308,53 +308,9 @@ export default function Pricing() {
                 <span className="text-[#FFD96B] font-medium">長尾效應的轉換載體</span>。
               </p>
 
-              {/* Funnel viz + Bullet checklist (side-by-side on md+) */}
-              <div className="flex flex-col md:flex-row md:items-stretch md:justify-between gap-6 md:gap-10 mb-7">
-                {/* Funnel visualization: 短影音 → 品牌網站 → 信任轉換 */}
-                <div
-                  className="inline-flex w-fit max-w-full flex-wrap items-center justify-center gap-5 md:gap-7 px-5 md:px-7 py-4 md:py-5 rounded-2xl shrink-0"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    border: '1px solid rgba(255, 255, 255, 0.06)',
-                  }}
-                >
-                  {[
-                    { icon: Film, label: '短影音', sub: 'Hook' },
-                    { icon: Globe, label: '品牌網站', sub: 'Build trust' },
-                    { icon: TrendingUp, label: '信任轉換', sub: 'Convert' },
-                  ].map((step, i, arr) => {
-                    const Icon = step.icon;
-                    return (
-                      <div key={step.label} className="flex items-center gap-3 md:gap-5">
-                        <div className="flex flex-col items-center gap-2">
-                          <div
-                            className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center"
-                            style={{
-                              background: 'rgba(255, 217, 107, 0.10)',
-                              border: '1px solid rgba(255, 217, 107, 0.25)',
-                            }}
-                          >
-                            <Icon className="w-5 h-5 md:w-6 md:h-6 text-[#FFD96B]" />
-                          </div>
-                          <div className="text-center">
-                            <div className="text-[13px] text-text-primary font-medium leading-tight">
-                              {step.label}
-                            </div>
-                            <div className="text-[10px] text-text-secondary tracking-[0.15em] uppercase font-[var(--font-mono)] mt-0.5">
-                              {step.sub}
-                            </div>
-                          </div>
-                        </div>
-                        {i < arr.length - 1 && (
-                          <ArrowRight className="w-4 h-4 text-text-secondary opacity-60 self-center -mt-3" />
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Outcomes — single unified card with internal rows */}
-                <div className="flex-1 min-w-0">
+              {/* Outcomes — single unified card with internal rows */}
+              <div className="mb-7">
+                <div className="min-w-0">
                   <p className="text-[14px] text-text-primary mb-4 font-medium">
                     透過完整的內容與轉換規劃協助：
                   </p>
