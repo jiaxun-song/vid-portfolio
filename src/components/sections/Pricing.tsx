@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, Sparkles, ArrowRight, Camera, Mic, FileText, Film, Globe, TrendingUp, Rocket, Magnet, ShieldCheck } from 'lucide-react';
+import { Check, Sparkles, ArrowRight, Camera, Mic, FileText, Film, Globe, TrendingUp, Magnet, ShieldCheck } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 interface PricingTier {
@@ -290,7 +290,6 @@ export default function Pricing() {
             <div className="relative">
               {/* Eyebrow tag */}
               <div className="flex items-center gap-2 mb-3">
-                <Rocket className="w-3.5 h-3.5 text-[#FFD96B]" />
                 <span className="text-[11px] tracking-[0.2em] uppercase text-[#FFD96B] font-[var(--font-mono)] font-bold">
                   Upgrade Services
                 </span>
