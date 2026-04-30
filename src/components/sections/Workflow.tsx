@@ -37,7 +37,7 @@ const steps: Step[] = [
     title: '最終交付',
     description:
       '確認修改完成後，交付最終影片檔案\n（可依需求提供不同平台尺寸或格式）',
-    highlight: '讓你可以直接上架使用',
+    highlight: '讓客戶可以直接上架使用',
   },
 ];
 
