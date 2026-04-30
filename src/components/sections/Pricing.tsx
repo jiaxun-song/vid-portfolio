@@ -302,9 +302,9 @@ export default function Pricing() {
 
               {/* Pitch paragraph */}
               <p className="text-[14px] md:text-[15px] text-text-secondary leading-[1.85] mb-8">
-                我同時提供品牌 / 公司 / 個人形象網站的規劃與設計，將短影音視為
+                同時提供品牌 / 公司 / 個人形象網站的規劃與設計，將短影音視為
                 <span className="text-[#FFD96B] font-medium">「引流入口」</span>，
-                並透過品牌形象網站的建置，打造具有
+                透過品牌形象網站建置，打造具有
                 <span className="text-[#FFD96B] font-medium">長尾效應的轉換載體</span>。
               </p>
 
