@@ -353,25 +353,32 @@ export default function Pricing() {
                   })}
                 </div>
 
-                {/* Outcomes — icon-illustrated like the funnel on the left */}
+                {/* Outcomes — single unified card with internal rows */}
                 <div className="flex-1 min-w-0">
                   <p className="text-[14px] text-text-primary mb-4 font-medium">
                     透過完整的內容與轉換規劃協助：
                   </p>
-                  <div className="flex flex-col gap-3">
+                  <div
+                    className="rounded-2xl overflow-hidden"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.02)',
+                      border: '1px solid rgba(255, 255, 255, 0.06)',
+                    }}
+                  >
                     {[
                       { icon: Magnet, label: '承接短影音帶來的流量', sub: 'Catch leads' },
                       { icon: ShieldCheck, label: '建立品牌信任感的網站', sub: 'Earn trust' },
-                    ].map((item) => {
+                    ].map((item, i, arr) => {
                       const Icon = item.icon;
                       return (
                         <div
                           key={item.label}
-                          className="flex items-center gap-4 px-4 py-3 rounded-xl"
-                          style={{
-                            background: 'rgba(255, 255, 255, 0.02)',
-                            border: '1px solid rgba(255, 255, 255, 0.06)',
-                          }}
+                          className="flex items-center gap-4 px-5 py-4"
+                          style={
+                            i < arr.length - 1
+                              ? { borderBottom: '1px solid rgba(255, 255, 255, 0.05)' }
+                              : undefined
+                          }
                         >
                           <div
                             className="w-11 h-11 rounded-full flex items-center justify-center shrink-0"
