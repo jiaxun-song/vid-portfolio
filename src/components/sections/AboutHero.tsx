@@ -81,7 +81,7 @@ export default function AboutHero() {
                 擁有 5 年網站設計經驗，能從「一支影片」延伸到「整體品牌體驗」，協助打造更完整且一致的品牌形象。
               </p>
               <p className="text-[var(--color-text-primary)] font-normal">
-                如果你正在尋找一位不只是剪輯，而是能一起思考內容與品牌、IP 呈現的合作夥伴，歡迎一起聊聊合作～
+                如果你正在尋找一位不只是剪輯，而是好溝通、穩定出片，能一起思考內容與品牌、IP 呈現的合作夥伴，歡迎一起聊聊合作～
               </p>
             </motion.div>
 
