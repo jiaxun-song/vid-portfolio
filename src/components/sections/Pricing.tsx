@@ -192,7 +192,7 @@ export default function Pricing() {
                 藏鏡人拍攝 / 口白 / 腳本企劃
               </h4>
               <p className="text-[13px] text-text-secondary mb-7 leading-[1.7]">
-                提供從「內容發想 → 拍攝 → 聲音演繹」的一條龍服務
+                提供從「內容發想 → 拍攝 → 聲音演繹」的一條龍加值服務
               </p>
 
               {/* Chip pipeline */}
