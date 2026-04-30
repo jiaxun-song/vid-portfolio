@@ -9,8 +9,6 @@ export default function Marquee() {
     <span className="flex items-center gap-8 whitespace-nowrap text-lg md:text-xl font-bold italic">
       <span className="text-text-primary">{t('hello')}</span>
       <span className="text-text-primary">•</span>
-      <span className="text-accent">{t('experience')}</span>
-      <span className="text-text-primary">•</span>
       <span className="text-accent">{t('trading')}</span>
       <span className="text-text-primary">•</span>
     </span>
