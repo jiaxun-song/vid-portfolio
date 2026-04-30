@@ -308,7 +308,7 @@ export default function Pricing() {
 
               {/* Funnel visualization: 短影音 → 品牌網站 → 信任轉換 */}
               <div
-                className="flex flex-wrap items-stretch justify-center md:justify-start gap-3 md:gap-5 p-4 md:p-5 rounded-2xl mb-8"
+                className="inline-flex w-fit max-w-full flex-wrap items-stretch gap-5 md:gap-7 px-5 md:px-7 py-4 md:py-5 rounded-2xl mb-8"
                 style={{
                   background: 'rgba(255, 255, 255, 0.02)',
                   border: '1px solid rgba(255, 255, 255, 0.06)',
