@@ -310,10 +310,10 @@ export default function Pricing() {
               </p>
 
               {/* Funnel viz + Bullet checklist (side-by-side on md+) */}
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-10 mb-7">
+              <div className="flex flex-col md:flex-row md:items-stretch md:justify-between gap-6 md:gap-10 mb-7">
                 {/* Funnel visualization: 短影音 → 品牌網站 → 信任轉換 */}
                 <div
-                  className="inline-flex w-fit max-w-full flex-wrap items-stretch gap-5 md:gap-7 px-5 md:px-7 py-4 md:py-5 rounded-2xl shrink-0"
+                  className="inline-flex w-fit max-w-full flex-wrap items-center justify-center gap-5 md:gap-7 px-5 md:px-7 py-4 md:py-5 rounded-2xl shrink-0"
                   style={{
                     background: 'rgba(255, 255, 255, 0.02)',
                     border: '1px solid rgba(255, 255, 255, 0.06)',
