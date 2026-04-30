@@ -1,6 +1,6 @@
 'use client';
 
-import { Info, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 interface Step {
@@ -133,7 +133,6 @@ export default function Workflow() {
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-accent)] via-[rgba(0,229,208,0.3)] to-transparent opacity-70" />
 
             <div className="flex items-center gap-2 mb-3">
-              <Info className="w-3.5 h-3.5 text-accent" />
               <span className="text-[11px] tracking-[0.2em] uppercase text-accent font-[var(--font-mono)] font-bold">
                 Notes
               </span>

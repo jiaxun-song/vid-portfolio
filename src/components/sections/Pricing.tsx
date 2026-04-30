@@ -315,7 +315,7 @@ export default function Pricing() {
                     透過完整的內容與轉換規劃協助：
                   </p>
                   <div
-                    className="rounded-2xl overflow-hidden"
+                    className="rounded-2xl overflow-hidden flex flex-col md:flex-row"
                     style={{
                       background: 'rgba(255, 255, 255, 0.02)',
                       border: '1px solid rgba(255, 255, 255, 0.06)',
@@ -326,15 +326,13 @@ export default function Pricing() {
                       { icon: ShieldCheck, label: '建立品牌信任感的網站', sub: 'Earn trust' },
                     ].map((item, i, arr) => {
                       const Icon = item.icon;
+                      const isNotLast = i < arr.length - 1;
                       return (
                         <div
                           key={item.label}
-                          className="flex items-center gap-4 px-5 py-4"
-                          style={
-                            i < arr.length - 1
-                              ? { borderBottom: '1px solid rgba(255, 255, 255, 0.05)' }
-                              : undefined
-                          }
+                          className={`flex items-center gap-4 px-5 py-4 flex-1 min-w-0 ${
+                            isNotLast ? 'border-b md:border-b-0 md:border-r border-white/[0.06]' : ''
+                          }`}
                         >
                           <div
                             className="w-11 h-11 rounded-full flex items-center justify-center shrink-0"

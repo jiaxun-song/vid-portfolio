@@ -58,7 +58,7 @@ export default function AboutHero() {
               </p>
               <p>
                 過去曾參與 Web3、Fintech、電商、交友產品網頁＆App 開發設計專案，這些經驗讓我在剪輯時不只關注畫面本身，而是更重視
-                <span className="text-[var(--color-accent)] font-normal">「內容如何被理解、被記住、被轉換」</span>。我習慣從觀眾的視角思考，將資訊拆解、重組，再用畫面節奏與音樂去放大情緒與重點。
+                <span className="text-[var(--color-accent)] font-normal">「內容如何被理解、被記住、被轉換」</span>。
               </p>
 
               {/* Editing style — accent bullet list */}
