@@ -297,7 +297,7 @@ export default function Pricing() {
 
               {/* Title */}
               <h4 className="font-[var(--font-display)] text-[22px] md:text-[26px] font-semibold text-text-primary mb-5 leading-snug">
-                Upgrade Services｜進階服務
+                進階服務
               </h4>
 
               {/* Pitch paragraph */}
