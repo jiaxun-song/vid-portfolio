@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, Sparkles, ArrowRight, Camera, Mic, FileText } from 'lucide-react';
+import { Check, Sparkles, ArrowRight, Camera, Mic, FileText, Film, Globe, TrendingUp, Rocket } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 interface PricingTier {
@@ -260,6 +260,132 @@ export default function Pricing() {
             </div>
           </ScrollReveal>
         </div>
+
+        {/* ─── Upgrade Services｜進階服務 ─────────────────────────────── */}
+        <ScrollReveal delay={0.3}>
+          <div
+            className="mt-6 relative rounded-[var(--card-border-radius)] p-8 md:p-10 overflow-hidden glass-medium transition-all duration-[400ms] ease-[var(--ease-out-expo)] hover:-translate-y-1"
+            style={{
+              backgroundImage:
+                'linear-gradient(135deg, rgba(0, 229, 208, 0.06) 0%, rgba(120, 80, 255, 0.04) 50%, rgba(0, 0, 0, 0) 80%)',
+            }}
+          >
+            {/* Top accent line */}
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-accent)] via-[#7B61FF] to-transparent" />
+
+            {/* Soft radial glow top-right */}
+            <div
+              aria-hidden
+              className="absolute -top-20 -right-20 w-[320px] h-[320px] pointer-events-none"
+              style={{
+                background:
+                  'radial-gradient(circle, rgba(0, 229, 208, 0.10) 0%, transparent 60%)',
+                filter: 'blur(20px)',
+              }}
+            />
+
+            <div className="relative">
+              {/* Eyebrow tag */}
+              <div className="flex items-center gap-2 mb-3">
+                <Rocket className="w-3.5 h-3.5 text-accent" />
+                <span className="text-[11px] tracking-[0.2em] uppercase text-accent font-[var(--font-mono)] font-bold">
+                  Upgrade Services
+                </span>
+              </div>
+
+              {/* Title */}
+              <h4 className="font-[var(--font-display)] text-[22px] md:text-[26px] font-semibold text-text-primary mb-5 leading-snug">
+                Upgrade Services｜進階服務
+              </h4>
+
+              {/* Pitch paragraph */}
+              <p className="text-[14px] md:text-[15px] text-text-secondary leading-[1.85] max-w-[720px] mb-8">
+                我同時提供品牌 / 公司 / 個人形象網站的規劃與設計，將短影音視為
+                <span className="text-accent font-medium">「引流入口」</span>，
+                並透過品牌形象網站的建置，打造具有
+                <span className="text-accent font-medium">長尾效應的轉換載體</span>。
+              </p>
+
+              {/* Funnel visualization: 短影音 → 品牌網站 → 信任轉換 */}
+              <div
+                className="flex flex-wrap items-stretch justify-center md:justify-start gap-3 md:gap-5 p-4 md:p-5 rounded-2xl mb-8"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.02)',
+                  border: '1px solid rgba(255, 255, 255, 0.06)',
+                }}
+              >
+                {[
+                  { icon: Film, label: '短影音', sub: 'Hook' },
+                  { icon: Globe, label: '品牌網站', sub: 'Build trust' },
+                  { icon: TrendingUp, label: '信任轉換', sub: 'Convert' },
+                ].map((step, i, arr) => {
+                  const Icon = step.icon;
+                  return (
+                    <div key={step.label} className="flex items-center gap-3 md:gap-5">
+                      <div className="flex flex-col items-center gap-2">
+                        <div
+                          className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center"
+                          style={{
+                            background: 'rgba(0, 229, 208, 0.08)',
+                            border: '1px solid rgba(0, 229, 208, 0.20)',
+                          }}
+                        >
+                          <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                        </div>
+                        <div className="text-center">
+                          <div className="text-[13px] text-text-primary font-medium leading-tight">
+                            {step.label}
+                          </div>
+                          <div className="text-[10px] text-text-secondary tracking-[0.15em] uppercase font-[var(--font-mono)] mt-0.5">
+                            {step.sub}
+                          </div>
+                        </div>
+                      </div>
+                      {i < arr.length - 1 && (
+                        <ArrowRight className="w-4 h-4 text-text-secondary opacity-60 self-center -mt-3" />
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Bullet checklist */}
+              <p className="text-[14px] text-text-primary mb-3 font-medium">
+                透過完整的內容與轉換規劃協助：
+              </p>
+              <ul className="flex flex-col gap-2.5 mb-7">
+                {['承接短影音帶來的流量', '建立品牌信任感的網站'].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-[14px] text-text-secondary leading-[1.7]"
+                  >
+                    <span
+                      className="mt-1 shrink-0 w-4 h-4 rounded-full flex items-center justify-center"
+                      style={{ background: 'rgba(0, 229, 208, 0.15)' }}
+                    >
+                      <Check className="w-2.5 h-2.5 text-accent" strokeWidth={3} />
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* CTA highlight */}
+              <div
+                className="inline-flex items-start gap-2.5 px-4 py-3 rounded-xl"
+                style={{
+                  background: 'rgba(0, 229, 208, 0.06)',
+                  border: '1px solid rgba(0, 229, 208, 0.18)',
+                }}
+              >
+                <Sparkles className="w-4 h-4 shrink-0 mt-[2px] text-accent" />
+                <span className="text-[13px] text-accent leading-[1.65] font-medium">
+                  可單獨委託網站設計，或與剪輯服務整合規劃
+                </span>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
 
       </div>
     </section>
