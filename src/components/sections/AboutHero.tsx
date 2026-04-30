@@ -74,8 +74,11 @@ export default function AboutHero() {
                 </ul>
               </div>
 
-              <p>
-                除了剪輯本身，我也<span className="text-[var(--color-accent)] font-normal">具備封面設計與基礎內容結構規劃能力，能協助你從「一支影片」提升到「整體內容品質」。</span>
+              <p className="text-[var(--color-accent)] font-normal">
+                不只是影片剪輯，我同時具備平面設計與品牌形象網站架設能力。
+              </p>
+              <p className="text-[var(--color-accent)] font-normal">
+                擁有 5 年網站設計經驗，能從「一支影片」延伸到「整體品牌體驗」，協助打造更完整且一致的品牌形象。
               </p>
               <p className="text-[var(--color-text-primary)] font-normal">
                 如果你正在尋找一位不只是剪輯，而是能一起思考內容與品牌、IP 呈現的合作夥伴，歡迎一起聊聊～
