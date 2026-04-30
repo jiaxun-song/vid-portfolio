@@ -299,7 +299,7 @@ export default function Pricing() {
               </h4>
 
               {/* Pitch paragraph */}
-              <p className="text-[14px] md:text-[15px] text-text-secondary leading-[1.85] max-w-[720px] mb-8">
+              <p className="text-[14px] md:text-[15px] text-text-secondary leading-[1.85] mb-8">
                 我同時提供品牌 / 公司 / 個人形象網站的規劃與設計，將短影音視為
                 <span className="text-accent font-medium">「引流入口」</span>，
                 並透過品牌形象網站的建置，打造具有
